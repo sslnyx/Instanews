@@ -3,9 +3,17 @@
 @import 'mixins';
 
 //complied in the stylesheet
-@import 'rest';
+@import 'reset';
 @import 'fonts';
 @import 'globals';
 @import 'header';
 @import 'content';
 @import 'footer';
+
+body {
+  background-color: black;
+}
+
+p {
+  color: red;
+}
