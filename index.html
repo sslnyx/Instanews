@@ -6,16 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="./build/css/style.css">
-  <title>Instanews
-  </title>
+  <title>Instanews</title>
 </head>
 
 <body>
-  <div class="logo">
-    <img src="./assets/images/nyt-logo.svg"></img>
-  </div>
-  <p>choose a section:</p>
+  <section class="content">
+    <div class="logo">
+      <img src="./assets/images/nyt-logo.svg"></img>
+    </div>
+    <p>choose a section:</p>
+    <select id="mySelect">
+      <option value="na">Sections...</option>
+      <option value="home">Home</option>
+      <option value="arts">Art</option>
+      <option value="business">Business</option>
+      <option value="sports">Sports</option>
+      <option value="technology">Technology</option>
+      <option value="fashion">Fashion</option>
+    </select>
+  </section>
 
+  <p class = "list" ></p>
+
+<footer>
+  <p>© copyright 2016 <span>instanews</span></p>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./build/js/index.min.js"></script>
 </body>
 
