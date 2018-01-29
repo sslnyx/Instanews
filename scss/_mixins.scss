@@ -1,0 +1,35 @@
+$mobile-width: 480px;
+
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+$desktop-width: 1000px;
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+
+@mixin flex-grid-items($cols) {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    >* {
+      $item-width: 100% / $cols;
+      width: $item-width;
+      box-sizing: border-box;
+    }
+  }
+}
+
+@include mobile {
+  @include flex-grid-items(2)
+}
+
+@include desktop {
+  @include flex-grid-items(4)
+}

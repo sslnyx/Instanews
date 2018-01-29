@@ -5,6 +5,20 @@ body {
   }
 }
 
+
+.logo{
+  max-width: 50%;
+  img{
+    width: 100%;
+  }
+}
+
+.selector{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .content {
   height: 90vh;
   display: flex;
@@ -18,11 +32,6 @@ body {
   @extend .content;
   height: 300px;
   padding: 2rem;
-}
-
-.list{
-  width: 100%;
-  display: block;
 }
 
 .listStyle{
@@ -41,6 +50,7 @@ body {
   background-size: cover;
   background-position: 50%;
   .abstract{
+    width: 100%;
     background-color: rgba(0,0,0,.6);;
     position: absolute;
     bottom: 0;
@@ -54,16 +64,3 @@ body {
 
 
 
-$desktop-width: 1000px;
-@mixin desktop {
-  @media (min-width: $desktop-width) {
-    @content;
-  }
-}
-
-$desktop-width: 480px;
-@mixin desktop {
-  @media (min-width: $desktop-width) {
-    @content;
-  }
-}
