@@ -3,6 +3,7 @@ $('#mySelect').change(function () {
   var x = $(this).val();
   $('.list').addClass('listStyle');
   $('.content').addClass('exContent');
+  $('.logo').addClass('exLogo');
 
   if (x !== 'na') {
     // append loading
@@ -25,15 +26,17 @@ $('#mySelect').change(function () {
           return article.multimedia.length;
         }).slice(0, 12);
 
-        // console.log(result);
+        console.log(result);
         $.each(picStories, function (index, value) {
           // console.log(value.multimedia[3].url);
           var html = '';
+          html += '<a href="'+ value.url +'">';
           html += '<li>'
           html += '<div class="bkimg" style="background-image:url(' + value.multimedia[4].url + ')">';
           html += '<div class="abstract"><p>' + value.abstract + '</p></div>';
           html += '</div>';
           html += '</li>';
+          html += '</a>';
           $('.list').append(html);
           
         });
