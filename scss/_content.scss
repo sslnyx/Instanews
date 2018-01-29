@@ -1,32 +1,67 @@
 body {
-  max-width: 1240px;
-  background-color: $background-color;
   margin: 0 auto;
-  .content {
-    height: 90vh;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
   p {
     color: $font-color;
   }
 }
 
-footer {
-  text-align: center;
-  p {
-    color: gray;
-  }
+.content {
+  height: 90vh;
+  display: flex;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.exContent {
+  @extend .content;
+  height: 300px;
+  padding: 2rem;
+}
+
+.list{
+  width: 100%;
+  display: block;
+}
+
+.listStyle{
+  list-style: none;
+  padding: 0;
 }
 
 .selectorbox {
   width: 300px;
 }
 
+.bkimg{
+  height: 400px;
+  position: relative;
+  background: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  .abstract{
+    background-color: rgba(0,0,0,.6);;
+    position: absolute;
+    bottom: 0;
+    p {
+      margin: 0;
+      padding: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}
+
+
+
 $desktop-width: 1000px;
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+$desktop-width: 480px;
 @mixin desktop {
   @media (min-width: $desktop-width) {
     @content;

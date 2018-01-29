@@ -1,21 +1,23 @@
-$("#mySelect").change(function () {
+$('#mySelect').change(function () {
 
   var x = $(this).val();
-  
-  if (x != 'na') {
+  $('.list').addClass('listStyle');
+  $('.content').addClass('exContent');
+
+  if (x !== 'na') {
     // append loading
     $('.list').before('<p class="loading">Loading</p>');
     $('.list').empty();
-    console.log(x)
+    // console.log(x)
     // Built by LucyBot. www.lucybot.com
     var url = 'https://api.nytimes.com/svc/topstories/v2/' + x + '.json';
-    url += "?" + $.param({
-      "api-key": "5b70bd22e5b746b79df4c06363b18772"
+    url += '?' + $.param({
+      'api-key': '5b70bd22e5b746b79df4c06363b18772'
     });
 
     $.ajax({
         url: url,
-        method: "GET"
+        method: 'GET'
       })
       .done(function (result) {
         // filter out articles that does not have img
@@ -23,16 +25,17 @@ $("#mySelect").change(function () {
           return article.multimedia.length;
         }).slice(0, 12);
 
-        console.log(result);
+        // console.log(result);
         $.each(picStories, function (index, value) {
-
-          var html = "";
-          html += "<li>";
-          html += '<img src="' + value.multimedia[0].url + '"/>';
-          html += '<p>' + value.abstract + '</p>';
-          html += "</li>";
-          $(".list").append(html);
-
+          // console.log(value.multimedia[3].url);
+          var html = '';
+          html += '<li>'
+          html += '<div class="bkimg" style="background-image:url(' + value.multimedia[4].url + ')">';
+          html += '<div class="abstract"><p>' + value.abstract + '</p></div>';
+          html += '</div>';
+          html += '</li>';
+          $('.list').append(html);
+          
         });
       })
       .fail(function (err) {
