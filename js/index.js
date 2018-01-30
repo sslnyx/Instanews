@@ -2,12 +2,12 @@ $('#mySelect').change(function () {
 
   var x = $(this).val();
   $('.list').addClass('listStyle');
-  $('.content').addClass('exContent');
+  $('.navigation').addClass('exNav');
   $('.logo').addClass('exLogo');
 
   if (x !== 'na') {
     // append loading
-    $('.list').before('<p class="loading">Loading</p>');
+    $('.list').before('<div class="loading"><img src="./assets/images/ajax-loader.gif"></div>');
     $('.list').empty();
     // console.log(x)
     // Built by LucyBot. www.lucybot.com

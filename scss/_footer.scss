@@ -1,6 +1,10 @@
 footer {
   text-align: center;
+  margin-left: 2rem;
   p {
     color: gray;
+  }
+  @include desktop {
+    text-align: left;
   }
 }

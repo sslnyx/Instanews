@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('../../fonts/OpenSans-Light.eot');
+  src: url('../../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'), url('../../fonts/OpenSans-Light.woff2') format('woff2'), url('../../fonts/OpenSans-Light.ttf') format('truetype'), url('../../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+}
+
+html {
+  font-family: 'OpenSansLight', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+
 footer {
   text-transform: capitalize;
   span {
