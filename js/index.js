@@ -26,7 +26,7 @@ $('#mySelect').change(function () {
           return article.multimedia.length;
         }).slice(0, 12);
 
-        console.log(result);
+        //console.log(result);
         $.each(picStories, function (index, value) {
           // console.log(value.multimedia[3].url);
           var html = '';
